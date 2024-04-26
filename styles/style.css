@@ -120,7 +120,8 @@ bottom: 0;
 right: 0;
   width: 200px;
   height: 200px;
-  background-color: yellow;
+  background-image: url(/assets/topo1.png);
+  background-size: cover;
 animation-name: intropersonaje;
   animation-duration: 1s;
 }

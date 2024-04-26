@@ -1,0 +1,507 @@
+body {
+background-color: rgb(0, 0, 0);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Impact;
+
+}
+/*--------------------------menu inicio -----------------------------------*/
+.menuinicio{
+  background-image: url(../assets/menuwallpaper1.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 40px;
+  animation-name: zoomintro;
+  animation-duration: 3s;
+}
+.logoinicio{
+  background-image: url(/assets/logo2.png);
+  background-size: cover;
+  width: 150px;
+  height: 140px;
+  position: absolute;
+  top: 35%;
+  left: 41%;
+  animation: logointro 1.2s ease-in 0s 1 normal forwards;
+}
+
+  @keyframes logointro {
+    0% {
+      animation-timing-function: ease-in;
+      opacity: 0;
+      transform: translateY(-250px);
+    }
+  
+    38% {
+      animation-timing-function: ease-out;
+      opacity: 0;
+      transform: translateY(0);
+    }
+  
+    55% {
+      animation-timing-function: ease-in;
+      transform: translateY(-45px);
+    }
+  
+    72% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  
+    81% {
+      animation-timing-function: ease-in;
+      transform: translateY(-18px);
+    }
+  
+    90% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  
+    95% {
+      animation-timing-function: ease-in;
+      transform: translateY(-8px);
+    }
+  
+    100% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  }
+
+.cajacomojugar{
+  display: none;
+  border-radius: 20px;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.311);
+  backdrop-filter: blur(3px);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.cajacomojugar:hover + .logoinicio {
+  display: none;
+}
+.botonretroceder{
+  z-index: 600;
+  filter: opacity(40%);
+text-decoration: none;
+  border: 3px solid white;
+  border-radius: 50%;
+  font-family: Arial;
+  color: rgb(255, 255, 255);
+  font-size: 23PX;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+top: 20px;
+right: 20px;
+transition: 0.1s ease;
+}
+.botonretroceder:hover{
+  background-color: rgb(255, 0, 0);
+  box-shadow: 0px 0px 15px 2px rgb(255, 0, 0);
+color: white;
+transform: scale(1.1);
+filter: opacity(100%);
+}
+
+.comojugarpersonaje{
+  z-index: 500;
+  position: absolute;
+bottom: 0;
+right: 0;
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+animation-name: intropersonaje;
+  animation-duration: 1s;
+}
+@keyframes intropersonaje {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateX(68px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateX(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateX(32px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateX(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateX(8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateX(0);
+	}
+}
+
+.comojugarinstrucciones{
+  justify-content: center;
+  align-items: center;
+  z-index: 400;
+  position: relative;
+  top: 0;
+  left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/INSTRUCCIONES.png);
+    background-size: cover;
+    animation: logointro 1.2s ease-in 0s 1 normal forwards;
+}
+
+/*--------------------------menu inicio -----------------------------------*/
+
+/*--------------------------nivel del juego -----------------------------------*/
+.contenedortotal{
+  width: 800px;
+  height: 460px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 40px;
+}
+.contenedorgeneral {
+  background-image: url(/assets/suelo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation-name: zoomintro;
+  animation-duration: 2s;
+}
+@keyframes zoomintro{
+  0%{
+transform: scale(5);
+filter: brightness(0);
+
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.CIRCULOINTRO{
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 999;
+animation-name: intro;
+animation-duration: 4s;
+}
+@keyframes intro{
+  0%{
+    backdrop-filter: blur(1px);
+    width: 0px;
+    height: 0px;
+    background-color: rgba(240, 248, 255, 0);
+    box-shadow: 0px 0px 0px 1000px rgba(0,0,0,1);
+  }
+  100%{
+    width: 1000px;
+    height: 1000px;
+    background-color: rgba(240, 248, 255, 0);
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
+  }
+}
+
+.tablerocont {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  height: 280px;
+}
+
+.caja {
+  background-image: url(/assets/plantasuelo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 70px;
+}
+
+.caja:hover {
+  cursor: pointer;
+  filter: brightness(1.5);
+  animation-name: sacudir;
+  animation-duration: 0.2s;
+  transition: 0.3s;
+}
+
+@keyframes sacudir{
+  0%{
+  transform: rotate(-5deg);
+  }
+  50%{
+    transform: rotate(5deg);
+  }
+  100%{
+    transform: rotate(-3deg);
+  }
+  }
+
+.verdura {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  transform: translate(267%, 177%) scale(0.6);
+  animation-name: rotacion;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+@keyframes rotacion{
+  0%{
+    transform:translate(267%, 177%) rotate(5deg)scale(0.6);
+    filter: brightness(1);
+  }
+  80%{
+    transform:translate(267%, 100%) rotate(-10deg)scale(1.2);
+    filter: brightness(1.5) saturate(2);
+  }
+  100%{
+    transform:translate(267%, 190%) rotate(5deg)scale(0.4);
+    filter: brightness(0.3);
+  }
+}
+.humo{
+  filter: opacity(0%);
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/humo1.png);
+  background-size: cover;
+  animation-name: humoanimacion ;
+  animation-duration: 0.6s;
+  transform: translate(0%, -100%);
+}
+@keyframes humoanimacion{
+  0%{
+    transform:translate(0%, -100%) rotate(10deg) scale(0);
+    filter: opacity(100%);
+  }
+
+  50%{
+    transform:translate(0%, -100%) scale(1);
+    filter: opacity(100%);
+
+  }
+  100%{
+    transform:translate(0%, -100%) scale(2);
+    filter: opacity(0%);
+
+  }
+}
+
+
+.opciones{
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  line-height: 120px;
+  margin: 30px;
+  width: 80px;
+  height: 120px;
+  font-size: 30px;
+position: absolute;
+right: 0;
+}
+
+.contador{
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  color: rgb(168, 155, 98);
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.83);
+  line-height: 120px;
+  margin: 30px;
+  width: 80px;
+  height: 120px;
+  font-size: 30px;
+position: absolute;
+  background-image: url(/assets/costal1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@keyframes animacionContador {
+  0% {
+      transform: scale(1) rotate(-5deg);
+      color: rgb(168, 155, 98);
+      text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.83);
+
+  }
+  50% {
+    font-size: 60px;
+      transform: scale(1.2) rotate(6deg);
+      color: rgb(0, 198, 13);
+      text-shadow: 0px 0px 8px rgb(255, 255, 255);
+  }
+  100% {
+      transform: scale(1);
+      color: rgb(168, 155, 98);
+      text-shadow: 0px 0px 5px rgb(255, 255, 255);
+  }
+}
+
+.animar-contador {
+  animation-name: animacionContador;
+  animation-duration: 0.5s;
+}
+
+.perdiste-mensaje {
+  color: white;
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+@keyframes perdisteimagen{
+  0%{
+    filter: opacity(0);
+    background-color: rgb(0, 0, 0);
+  }
+  30%{
+    filter: opacity(100);
+    background-color: rgb(0, 0, 0);
+  }
+  80%{
+    filter: opacity(100);
+    background-color: rgb(0, 0, 0);
+  }
+  100%{
+    filter: opacity(100);
+    background-color: red;
+  }
+}
+.explosionwallpaper{
+  background-color: red;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: perdisteimagen;
+  animation-duration: 2s;
+}
+.explosion {
+  top: 20%;
+  left: 25%;
+  filter: opacity(0);
+  position: absolute;
+  width: 300px;
+  height: 180px;
+  background-image: url(/assets/explosion\ anim.png);
+  background-repeat: no-repeat;
+  background-position: -600px 0;
+  animation: explotar 0.5s steps(16);
+}
+@keyframes explotar{
+  0%{
+    background-color: rgba(255, 196, 0, 0.384);
+    background-position: 0px 0;
+    filter: opacity(100%);
+    transform: scale(3);
+  }
+  100%{
+    background-color: rgb(0, 0, 0);
+    background-position: -4800px 0;
+    filter: opacity(100%) brightness(0);
+    transform: scale(7);
+  }
+}
+
+.botones{
+  top: 58%;
+  left: 50%;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 10px;
+  transform: translateY(350px);
+  display: block;
+  color: rgba(255, 255, 255, 0.387);
+  transition: 0.2s ease;
+}
+.botones:hover{
+  transform:translateY(350px) scale(1.3);
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 7px rgb(11, 226, 51);
+animation-name: movimientomenus;
+}
+@keyframes movimientomenus{
+  0%{
+    transform: rotate(2deg);
+  }
+  50%{
+    transform: rotate(-2deg);
+  }
+  75%{
+    transform: rotate(1deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+  }
+
+  .ganaste-mensaje {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: green;
+  }
+
+  .intermedio-mensaje {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 800;
+    width: 250px; /* Ancho del mensaje */
+    height: 250px; /* Alto del mensaje */
+    background-color: yellow; /* Color de fondo */
+    display: none; /* Inicialmente oculto */
+    /* Agrega cualquier otro estilo que desees */
+    animation-name: intropersonaje;
+  animation-duration: 1s;
+  }
+  
+/*--------------------------nivel del juego -----------------------------------*/

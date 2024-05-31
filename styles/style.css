@@ -79,15 +79,24 @@ background-color: rgb(0, 0, 0);
   display: none;
   border-radius: 20px;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.311);
-  backdrop-filter: blur(3px);
+background-image: url(../assets/menuwallpaper1.jpg);
+background-size: cover;
   width: 100%;
   height: 100%;
   position: absolute;
 }
-.cajacomojugar:hover + .logoinicio {
-  display: none;
+.cajacomojugar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.566); /* Color negro con 50% de opacidad */
+  z-index: 1; /* Asegura que la capa oscura esté sobre la imagen de fondo */
 }
+
+
 .botonretroceder{
   z-index: 600;
   filter: opacity(40%);
@@ -118,8 +127,8 @@ filter: opacity(100%);
   position: absolute;
 bottom: 0;
 right: 0;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   background-image: url(/assets/topo1.png);
   background-size: cover;
 animation-name: intropersonaje;
@@ -395,6 +404,8 @@ position: absolute;
   width: 100%;
   height: 100%;
   display: none;
+  background-image: url(../assets/wallpaper\ explosion.jpg);
+  background-size: cover;
 }
 @keyframes perdisteimagen{
   0%{
@@ -411,11 +422,9 @@ position: absolute;
   }
   100%{
     filter: opacity(100);
-    background-color: red;
   }
 }
 .explosionwallpaper{
-  background-color: red;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -488,21 +497,20 @@ animation-name: movimientomenus;
     width: 100%;
     height: 100%;
     display: none;
-    background-color: green;
+    background-image: url(../assets/wallpaperjuego3\ fin\ juego.jpg);
+    background-size: cover;
+    animation-name: zoomintro;
+    animation-duration: 3s;
+  }
+  .logoGANASTE{
+    background-image: url(/assets/GANASTE.png);
+    background-size: cover;
+    width: 322px;
+    height: 80px;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    animation: logointro 1.5s ease-in 1s 1 normal forwards;
   }
 
-  .intermedio-mensaje {
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: 800;
-    width: 250px; /* Ancho del mensaje */
-    height: 250px; /* Alto del mensaje */
-    background-color: yellow; /* Color de fondo */
-    display: none; /* Inicialmente oculto */
-    /* Agrega cualquier otro estilo que desees */
-    animation-name: intropersonaje;
-  animation-duration: 1s;
-  }
-  
 /*--------------------------nivel del juego -----------------------------------*/

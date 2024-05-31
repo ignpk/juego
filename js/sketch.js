@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
   var cajas = document.querySelectorAll(".caja");
   var verduras = document.querySelectorAll(".verdura");
-  var contador = 0; // Variable para llevar la cuenta
+  var contador = 0;
 
-  // Función para actualizar el contador
+  // actualizar el contador
   function actualizarContador() {
     var contadorElemento = document.querySelector(".contador");
     contadorElemento.textContent = contador; // Actualiza el contenido del contador con el valor actual
     contadorElemento.classList.add("animar-contador"); // Agrega la clase de animación al contador
     setTimeout(function() {
       contadorElemento.classList.remove("animar-contador"); // Remueve la clase de animación después de un momento
-    }, 1000); // Tiempo suficiente para que termine la animación
+    }, 1000);
   }
 
   // Función para mostrar el mensaje "Perdiste" con un retraso de 2 segundos
@@ -27,16 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
     mensajeGanaste.style.display = "block";
   }
 
-  // Función para mostrar el mensaje "Intermedio" y ocultarlo después de 2 segundos
-  function mostrarMensajeIntermedio() {
-    var mensajeIntermedio = document.querySelector(".intermedio-mensaje");
-    mensajeIntermedio.style.display = "block"; // Mostrar el mensaje "Intermedio"
-
-    // Temporizador para ocultar el mensaje después de 2 segundos
-    setTimeout(function() {
-      mensajeIntermedio.style.display = "none"; // Ocultar el mensaje después de 2 segundos
-    }, 2500);
-  }
 
   cajas.forEach(function(caja) {
     caja.addEventListener("click", function(event) {
@@ -52,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
       verduraSeleccionada.style.top = caja.offsetTop + "px";
       verduraSeleccionada.style.left = caja.offsetLeft + "px";
 
-      // Agregamos una transición suave
       verduraSeleccionada.style.transition = "opacity 0.5s ease-in-out"; // Transición de 0.5 segundos
 
       // Configuramos la opacidad a 0 antes de agregar la verdura

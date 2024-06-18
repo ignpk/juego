@@ -1,15 +1,16 @@
 body {
-background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: Impact;
-
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
 }
+
 /*--------------------------menu inicio -----------------------------------*/
-.menuinicio{
+.menuinicio {
   background-image: url(../assets/menuwallpaper1.jpg);
   background-size: cover;
   width: 100%;
@@ -17,10 +18,10 @@ background-color: rgb(0, 0, 0);
   position: relative;
   overflow: hidden;
   border-radius: 40px;
-  animation-name: zoomintro;
-  animation-duration: 3s;
+
 }
-.logoinicio{
+
+.logoinicio {
   background-image: url(/assets/logo2.png);
   background-size: cover;
   width: 150px;
@@ -28,63 +29,49 @@ background-color: rgb(0, 0, 0);
   position: absolute;
   top: 35%;
   left: 41%;
-  animation: logointro 1.2s ease-in 0s 1 normal forwards;
+  animation: logointro 1.2s ease-in forwards;
 }
 
-  @keyframes logointro {
-    0% {
-      animation-timing-function: ease-in;
-      opacity: 0;
-      transform: translateY(-250px);
-    }
-  
-    38% {
-      animation-timing-function: ease-out;
-      opacity: 0;
-      transform: translateY(0);
-    }
-  
-    55% {
-      animation-timing-function: ease-in;
-      transform: translateY(-45px);
-    }
-  
-    72% {
-      animation-timing-function: ease-out;
-      transform: translateY(0);
-    }
-  
-    81% {
-      animation-timing-function: ease-in;
-      transform: translateY(-18px);
-    }
-  
-    90% {
-      animation-timing-function: ease-out;
-      transform: translateY(0);
-    }
-  
-    95% {
-      animation-timing-function: ease-in;
-      transform: translateY(-8px);
-    }
-  
-    100% {
-      animation-timing-function: ease-out;
-      transform: translateY(0);
-    }
+@keyframes logointro {
+  0% {
+    opacity: 0;
+    transform: translateY(-250px);
   }
+  38% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  55% {
+    transform: translateY(-45px);
+  }
+  72% {
+    transform: translateY(0);
+  }
+  81% {
+    transform: translateY(-18px);
+  }
+  90% {
+    transform: translateY(0);
+  }
+  95% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
-.cajacomojugar{
+.cajacomojugar {
   display: none;
   border-radius: 20px;
   z-index: 999;
-background-image: url(../assets/menuwallpaper1.jpg);
-background-size: cover;
+  background-image: url(../assets/menuwallpaper1.jpg);
+  background-size: cover;
   width: 100%;
   height: 100%;
   position: absolute;
 }
+
 .cajacomojugar::before {
   content: '';
   position: absolute;
@@ -92,138 +79,116 @@ background-size: cover;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.566); /* Color negro con 50% de opacidad */
-  z-index: 1; /* Asegura que la capa oscura esté sobre la imagen de fondo */
+  background: rgba(0, 0, 0, 0.566);
+  z-index: 1;
 }
 
-
-.botonretroceder{
+.botonretroceder {
   z-index: 600;
   filter: opacity(40%);
-text-decoration: none;
+  text-decoration: none;
   border: 3px solid white;
   border-radius: 50%;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   color: rgb(255, 255, 255);
-  font-size: 23PX;
+  font-size: 23px;
   cursor: pointer;
   width: 30px;
   height: 30px;
   position: absolute;
-top: 20px;
-right: 20px;
-transition: 0.1s ease;
-}
-.botonretroceder:hover{
-  background-color: rgb(255, 0, 0);
-  box-shadow: 0px 0px 15px 2px rgb(255, 0, 0);
-color: white;
-transform: scale(1.1);
-filter: opacity(100%);
+  top: 20px;
+  right: 20px;
+  transition: 0.1s ease;
 }
 
-.comojugarpersonaje{
+.botonretroceder:hover {
+  background-color: rgb(255, 0, 0);
+  box-shadow: 0px 0px 15px 2px rgb(255, 0, 0);
+  color: white;
+  transform: scale(1.1);
+  filter: opacity(100%);
+}
+
+.comojugarpersonaje {
   z-index: 500;
   position: absolute;
-bottom: 0;
-right: 0;
+  bottom: 0;
+  right: 0;
   width: 250px;
   height: 250px;
   background-image: url(/assets/topo1.png);
   background-size: cover;
-animation-name: intropersonaje;
-  animation-duration: 1s;
+  animation: intropersonaje 1s;
 }
+
 @keyframes intropersonaje {
-	0% {
-		animation-timing-function: ease-in;
-		opacity: 0;
-		transform: translateX(250px);
-	}
-
-	38% {
-		animation-timing-function: ease-out;
-		opacity: 1;
-		transform: translateX(0);
-	}
-
-	55% {
-		animation-timing-function: ease-in;
-		transform: translateX(68px);
-	}
-
-	72% {
-		animation-timing-function: ease-out;
-		transform: translateX(0);
-	}
-
-	81% {
-		animation-timing-function: ease-in;
-		transform: translateX(32px);
-	}
-
-	90% {
-		animation-timing-function: ease-out;
-		transform: translateX(0);
-	}
-
-	95% {
-		animation-timing-function: ease-in;
-		transform: translateX(8px);
-	}
-
-	100% {
-		animation-timing-function: ease-out;
-		transform: translateX(0);
-	}
+  0% {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+  38% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  55% {
+    transform: translateX(68px);
+  }
+  72% {
+    transform: translateX(0);
+  }
+  81% {
+    transform: translateX(32px);
+  }
+  90% {
+    transform: translateX(0);
+  }
+  95% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
-.comojugarinstrucciones{
+.comojugarinstrucciones {
   justify-content: center;
   align-items: center;
   z-index: 400;
   position: relative;
-  top: 0;
-  left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(/assets/INSTRUCCIONES.png);
-    background-size: cover;
-    animation: logointro 1.2s ease-in 0s 1 normal forwards;
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/INSTRUCCIONES.png);
+  background-size: cover;
+  animation: logointro 1.2s ease-in forwards;
 }
 
-/*--------------------------menu inicio -----------------------------------*/
-
 /*--------------------------nivel del juego -----------------------------------*/
-.contenedortotal{
+.contenedortotal {
   width: 800px;
   height: 460px;
   position: relative;
   overflow: hidden;
   border-radius: 40px;
 }
+
 .contenedorgeneral {
-  background-image: url(/assets/suelo.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
   position: absolute;
   width: 100%;
   height: 100%;
-  animation-name: zoomintro;
-  animation-duration: 2s;
+  animation: zoomintro 2s;
 }
-@keyframes zoomintro{
-  0%{
-transform: scale(5);
-filter: brightness(0);
 
+@keyframes zoomintro {
+  0% {
+    transform: scale(5);
+    filter: brightness(0);
   }
-  100%{
+  100% {
     transform: scale(1);
   }
 }
 
-.CIRCULOINTRO{
+.CIRCULOINTRO {
   pointer-events: none;
   position: absolute;
   top: 50%;
@@ -231,22 +196,22 @@ filter: brightness(0);
   transform: translate(-50%, -50%);
   border-radius: 50%;
   z-index: 999;
-animation-name: intro;
-animation-duration: 4s;
+  animation: intro 4s;
 }
-@keyframes intro{
-  0%{
+
+@keyframes intro {
+  0% {
     backdrop-filter: blur(1px);
     width: 0px;
     height: 0px;
     background-color: rgba(240, 248, 255, 0);
-    box-shadow: 0px 0px 0px 1000px rgba(0,0,0,1);
+    box-shadow: 0px 0px 0px 1000px rgba(0, 0, 0, 1);
   }
-  100%{
+  100% {
     width: 1000px;
     height: 1000px;
     background-color: rgba(240, 248, 255, 0);
-    box-shadow: 0px 0px 0px 1px rgba(0,0,0,1);
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 1);
   }
 }
 
@@ -268,82 +233,77 @@ animation-duration: 4s;
   background-repeat: no-repeat;
   width: 70px;
   height: 70px;
+  cursor: pointer;
+  transition: filter 0.3s;
 }
 
 .caja:hover {
-  cursor: pointer;
   filter: brightness(1.5);
-  animation-name: sacudir;
-  animation-duration: 0.2s;
-  transition: 0.3s;
+  animation: sacudir 0.2s;
 }
 
-@keyframes sacudir{
-  0%{
-  transform: rotate(-5deg);
+@keyframes sacudir {
+  0% {
+    transform: rotate(-5deg);
   }
-  50%{
+  50% {
     transform: rotate(5deg);
   }
-  100%{
+  100% {
     transform: rotate(-3deg);
   }
-  }
+}
 
 .verdura {
   position: absolute;
   width: 70px;
   height: 70px;
   transform: translate(267%, 177%) scale(0.6);
-  animation-name: rotacion;
-  animation-duration: 1s;
-  animation-delay: 0.5s;
+  animation: rotacion 1s 0.5s;
 }
-@keyframes rotacion{
-  0%{
-    transform:translate(267%, 177%) rotate(5deg)scale(0.6);
+
+@keyframes rotacion {
+  0% {
+    transform: translate(267%, 177%) rotate(5deg) scale(0.6);
     filter: brightness(1);
   }
-  80%{
-    transform:translate(267%, 100%) rotate(-10deg)scale(1.2);
+  80% {
+    transform: translate(267%, 100%) rotate(-10deg) scale(1.2);
     filter: brightness(1.5) saturate(2);
   }
-  100%{
-    transform:translate(267%, 190%) rotate(5deg)scale(0.4);
+  100% {
+    transform: translate(267%, 190%) rotate(5deg) scale(0.4);
     filter: brightness(0.3);
   }
 }
-.humo{
+
+.humo {
   filter: opacity(0%);
   pointer-events: none;
   width: 100%;
   height: 100%;
   background-image: url(/assets/humo1.png);
   background-size: cover;
-  animation-name: humoanimacion ;
-  animation-duration: 0.6s;
+  animation: humoanimacion 0.6s;
   transform: translate(0%, -100%);
 }
-@keyframes humoanimacion{
-  0%{
-    transform:translate(0%, -100%) rotate(10deg) scale(0);
+
+@keyframes humoanimacion {
+  0% {
+    transform: translate(0%, -100%) rotate(10deg) scale(0);
     filter: opacity(100%);
   }
-
-  50%{
-    transform:translate(0%, -100%) scale(1);
+  50% {
+    transform: translate(0%, -100%) scale(1);
     filter: opacity(100%);
-
   }
-  100%{
-    transform:translate(0%, -100%) scale(2);
+  100% {
+    transform: translate(0%, -100%) scale(2);
     filter: opacity(0%);
-
   }
 }
 
-
-.opciones{
+.opciones {
   display: flex;
   justify-content: center;
   color: rgb(255, 255, 255);
@@ -352,11 +312,11 @@ animation-duration: 4s;
   width: 80px;
   height: 120px;
   font-size: 30px;
-position: absolute;
-right: 0;
+  position: absolute;
+  right: 0;
 }
 
-.contador{
+.contador {
   pointer-events: none;
   display: flex;
   justify-content: center;
@@ -367,34 +327,33 @@ right: 0;
   width: 80px;
   height: 120px;
   font-size: 30px;
-position: absolute;
+  position: absolute;
   background-image: url(/assets/costal1.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 @keyframes animacionContador {
   0% {
-      transform: scale(1) rotate(-5deg);
-      color: rgb(168, 155, 98);
-      text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.83);
-
+    transform: scale(1) rotate(-5deg);
+    color: rgb(168, 155, 98);
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.83);
   }
   50% {
     font-size: 60px;
-      transform: scale(1.2) rotate(6deg);
-      color: rgb(0, 198, 13);
-      text-shadow: 0px 0px 8px rgb(255, 255, 255);
+    transform: scale(1.2) rotate(6deg);
+    color: rgb(0, 198, 13);
+    text-shadow: 0px 0px 8px rgb(255, 255, 255);
   }
   100% {
-      transform: scale(1);
-      color: rgb(168, 155, 98);
-      text-shadow: 0px 0px 5px rgb(255, 255, 255);
+    transform: scale(1);
+    color: rgb(168, 155, 98);
+    text-shadow: 0px 0px 5px rgba(255, 255, 255);
   }
 }
 
 .animar-contador {
-  animation-name: animacionContador;
-  animation-duration: 0.5s;
+  animation: animacionContador 0.5s;
 }
 
 .perdiste-mensaje {
@@ -404,34 +363,31 @@ position: absolute;
   width: 100%;
   height: 100%;
   display: none;
-  background-image: url(../assets/wallpaper\ explosion.jpg);
-  background-size: cover;
 }
-@keyframes perdisteimagen{
-  0%{
+
+@keyframes perdisteimagen {
+  0% {
+    filter: opacity(100);
+    background-color: rgb(0, 0, 0);
+  }
+  50% {
+    filter: opacity(100);
+    background-color: rgb(0, 0, 0);
+  }
+  100% {
     filter: opacity(0);
-    background-color: rgb(0, 0, 0);
-  }
-  30%{
-    filter: opacity(100);
-    background-color: rgb(0, 0, 0);
-  }
-  80%{
-    filter: opacity(100);
-    background-color: rgb(0, 0, 0);
-  }
-  100%{
-    filter: opacity(100);
   }
 }
-.explosionwallpaper{
+
+.explosionwallpaper {
   position: absolute;
   width: 100%;
   height: 100%;
-  animation: perdisteimagen;
-  animation-duration: 2s;
+  animation: perdisteimagen 2s;
 }
+
 .explosion {
+  z-index: 9999;
   top: 20%;
   left: 25%;
   filter: opacity(0);
@@ -443,14 +399,15 @@ position: absolute;
   background-position: -600px 0;
   animation: explotar 0.5s steps(16);
 }
-@keyframes explotar{
-  0%{
-    background-color: rgba(255, 196, 0, 0.384);
+
+@keyframes explotar {
+  0% {
+    background-color: rgba(255, 196, 0, 0.722);
     background-position: 0px 0;
     filter: opacity(100%);
     transform: scale(3);
   }
-  100%{
+  100% {
     background-color: rgb(0, 0, 0);
     background-position: -4800px 0;
     filter: opacity(100%) brightness(0);
@@ -458,7 +415,7 @@ position: absolute;
   }
 }
 
-.botones{
+.botones {
   top: 58%;
   left: 50%;
   cursor: pointer;
@@ -470,47 +427,31 @@ position: absolute;
   color: rgba(255, 255, 255, 0.387);
   transition: 0.2s ease;
 }
-.botones:hover{
-  transform:translateY(350px) scale(1.3);
+
+.botones:hover {
+  transform: translateY(350px) scale(1.3);
   color: rgb(255, 255, 255);
   text-shadow: 0px 0px 7px rgb(11, 226, 51);
-animation-name: movimientomenus;
 }
-@keyframes movimientomenus{
-  0%{
-    transform: rotate(2deg);
-  }
-  50%{
-    transform: rotate(-2deg);
-  }
-  75%{
-    transform: rotate(1deg);
-  }
-  100%{
-    transform: rotate(0deg);
-  }
-  }
 
-  .ganaste-mensaje {
-    position: absolute;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    display: none;
-    background-image: url(../assets/wallpaperjuego3\ fin\ juego.jpg);
-    background-size: cover;
-    animation-name: zoomintro;
-    animation-duration: 3s;
-  }
-  .logoGANASTE{
-    background-image: url(/assets/GANASTE.png);
-    background-size: cover;
-    width: 322px;
-    height: 80px;
-    position: absolute;
-    top: 10%;
-    left: 30%;
-    animation: logointro 1.5s ease-in 1s 1 normal forwards;
-  }
 
-/*--------------------------nivel del juego -----------------------------------*/
+
+.ganaste-mensaje {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  display: none;
+  animation: zoomintro 3s;
+}
+
+.logoGANASTE {
+  background-image: url(/assets/GANASTE.png);
+  background-size: cover;
+  width: 322px;
+  height: 80px;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  animation: logointro 1.5s ease-in 1s forwards;
+}
